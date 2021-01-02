@@ -28,6 +28,8 @@ public class PlayerMover : Photon.MonoBehaviour
 	{
 		controller = gameObject.AddComponent<CharacterController>();
 		controller.radius = 1f;
+		if (!photonView.isMine)
+			Destroy(GetComponentInChildren<Camera>().gameObject);
 	}
 
 	void FixedUpdate()
