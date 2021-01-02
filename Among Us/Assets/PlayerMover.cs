@@ -23,8 +23,6 @@ public class PlayerMover : MonoBehaviour
 	{
 		controller = gameObject.AddComponent<CharacterController>();
 		controller.radius = 1f;
-		//controller.height
-
 	}
 
 	void FixedUpdate()
