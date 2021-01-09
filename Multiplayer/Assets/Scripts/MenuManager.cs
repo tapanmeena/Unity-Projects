@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
@@ -14,13 +12,11 @@ public class MenuManager : MonoBehaviour
 
 	public void OpenMenu(string menuName)
 	{
-//		Debug.Log("Menu Name: " + menuName);
 		for (int i = 0; i < MenuList.Length; i++)
 		{
-	//		Debug.Log("MenuLists:" + MenuList[i].name);
 			if(MenuList[i].menuName == menuName)
 			{
-				OpenMenu(MenuList[i]);
+				MenuList[i].Open();
 			}
 			else if(MenuList[i].open)
 			{
